@@ -1,0 +1,140 @@
+html, body, #map-canvas { height: 100%; margin: 0; padding: 0;font-family: Roboto,Arial,sans-serif}
+#map-canvas{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+#map-canvas.minimized{
+  width:70%;
+  left:30%;
+}
+#searchBarContainer{
+    position:fixed;
+    top:3em;
+    left:5%;
+}
+#searchBar{
+    position: fixed;
+    width:15%;
+    height:25px;
+    border-radius:3px 0 0 3px;
+    border: 1px solid #ADA9A5;
+    margin:0;
+    padding: 1px .5em 1px .5em;
+}
+#searchBar:focus{
+    outline:none;
+    border-color:#4D90FE;
+}
+#searchButton{
+    margin:0;
+    position:fixed;
+    top:3em;
+    left:21%;
+    width:5%;
+    height:27px;
+    background:#4D90FE;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #4D90FE;
+    color:#fff;
+    text-align:center;
+}
+#searchButton:hover{
+    cursor:pointer;
+    background:#2E5698;
+    border-color:#2E5698;
+}
+
+
+#rankings{
+    position:fixed;
+    left:0;
+    top:0;
+    width:26%;
+    height:100%;
+    padding:0 2%;
+    padding-top:4.5em;
+    border: 1px solid #ADA9A5;
+    background:#fff;
+    -webkit-transition: left 0.5s ease;
+       -moz-transition: left 0.5s ease;
+         -o-transition: left 0.5s ease;
+            transition: left 0.5s ease;
+    overflow-y:auto;
+}
+#rankings.minimized{
+    left:-30%;
+}
+#rankings > h2{
+    margin:1em;
+}
+.hidden{
+    display:none;
+}
+.toggle{
+    text-align:center;
+    display:table-cell;
+    width:45%;
+    height:3em;
+           box-sizing:border-box;
+      -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+    border: 1px solid #ADA9A5;
+}
+.toggle:hover{
+    background:#ddd;
+    cursor:pointer;
+}
+.restaurauntInfoBlock{
+    border-top:1px solid #ADA9A5;
+    border-bottom:1px solid #ADA9A5;
+}
+.restaurauntInfoBlock:hover{
+    background:#ddd;
+}
+.safetyInfo{
+    display:inline-block;
+    height:1em;
+    width:1em;
+    margin:0 1em;
+    border-radius: 1em;
+} 
+
+#modalInfo{
+    width:50%;
+    height:50%;
+    overflow:auto;
+    position:fixed;
+    margin:0;
+    left:25%;
+    top:25%;
+    background:#fff;
+    padding:1em;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#modalInfo.minimized{
+    width:10%;
+    height:10%;
+    left:42.5%;
+    top:-20%;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#modalInfoClose{
+    position:absolute;
+    right:1em;
+    top:1em;
+    cursor:pointer;
+}
+#modalInfoOpen{
+    position:absolute;
+    top:.5em;
+    left:49%;
+    cursor:pointer;
+}

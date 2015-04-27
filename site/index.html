@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="map.css">
+        <link href='http://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+        <!-- The Google Maps API -->
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?v=3&libraries=visualization&key=AIzaSyCyZwdiUyxHco5qWCIngJ3tDnApxFSX0g8">
+        </script>
+        
+        
+        <script type="text/javascript"
+            src="config.js">
+        </script>
+        
+        <!-- My Code -->
+        <script type="text/javascript"
+            src="map.js">
+        </script>
+    </head>
+    <body>
+        <!-- canvas on which the map is drawn by Google  -->
+        <div id="map-canvas"></div>
+        
+        
+        <!-- Display of the rankings, hidden at first -->
+        <div id="rankings" class="minimized">
+            <h2>Rankings</h2>
+            <div id="rankingSort">
+                <span class="toggle" onclick="setAscending(true)">Safest</span>
+                <span class="toggle" onclick="setAscending(false)">Most Dangerous</span>
+            </div>
+            <hr />
+            <div id="restaurauntRankings">
+            </div>
+        </div>
+        
+        <!-- Search bar -->
+        <div id="searchBarContainer">
+            <input type="text" id="searchBar" placeholder="Search for a restauraunt."></input>
+	  
+	    <div id="searchButton" onclick="selectRestauraunts()">
+		<i class="fa fa-search"></i>
+	    </div>
+        </div>
+        
+        <!-- Modal Info Window -->
+        <div id="modalInfo">
+	  <h1>Crime and Dining</h2><hr />
+	  <p>Using data from the city of Boston on <a href='https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx' title="Crime Incident Reports">crime incidents</a>
+	  and <a href='https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq' title='Food Establishment Licenses'> active food
+	  establishment licenses</a>, I investigated the corelation between occurences of crime and places to eat. To do so, for each licensed restauraunt in Boston, 
+	  I compiled all of the crime incidents that took place within 100 meters of the location, took into account how long ago the crime occured, the type of crime, 
+	  and any weapons involved, and I calculated a heuristic for how "dangerous" the crime was relative to the restauraunt. The Danger Rating was then the sum of the dangers
+	  of each individual crime.</p>
+	  <p>And then I made this! Here you can see every restauraunt in Boston, and if you click on one you will see a report generated about the safety of the restauraunt.</p>
+	  <p>Additionally, you can search for restaunts to limit what is displayed and see the safest and most dangerous of, for instance, "Starbucks" or "Subways." 
+	  You can also search more generally, and any restauraunt whose name includes your search will be displayed. This means that searches like "Pizza" or "Cafe" are interesting.</p>
+	  <i id="modalInfoClose" class="fa fa-times"></i>
+	</div>
+	<i id="modalInfoOpen" class="fa fa-question-circle"></i>
+    </body>
+</html>
