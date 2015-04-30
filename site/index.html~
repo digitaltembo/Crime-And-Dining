@@ -35,7 +35,7 @@
             </div>
             <div id="restaurauntRankings">
             </div>
-            <i id="searchClose" class="fa fa-times"></i>
+            <i id="closeSearch" class="fa fa-times"></i>
         </div>
         
         <!-- Search bar -->

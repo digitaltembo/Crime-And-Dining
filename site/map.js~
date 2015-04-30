@@ -151,7 +151,7 @@ function initialize() {
     document.getElementById('searchClose').onclick = function(e){
         searchBar.value = "";
         selectRestauraunts();
-    };
+    }
     
     // if enter is hit, search for restauraunts
     searchBar.onkeypress = function(e){

@@ -150,5 +150,5 @@ html, body, #map-canvas { height: 100%; margin: 0; padding: 0;font-family: Robot
     right:1em;
     top:1em;
     cursor:pointer;
-    color:#ADA9A5;
+    background:#ADA9A5;
 }   
